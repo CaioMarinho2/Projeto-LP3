@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="650.0" prefWidth="440.0" spacing="20.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.lp3.paginaCadastroController">
+    <children>
+        <Label prefHeight="18.0" prefWidth="90.0" text="Crie sua conta" />
+      <Label layoutX="30.0" layoutY="30.0" prefHeight="18.0" prefWidth="90.0" text="Nome  " />
+      <TextArea prefHeight="42.0" prefWidth="390.0" />
+      <Label prefHeight="18.0" prefWidth="90.0" text="Sobrenome" />
+      <TextArea prefHeight="42.0" prefWidth="390.0" />
+      <Label layoutX="30.0" layoutY="68.0" prefHeight="18.0" prefWidth="90.0" text="Email" />
+      <TextArea layoutX="30.0" layoutY="107.0" prefHeight="42.0" prefWidth="390.0" />
+      <Label layoutX="30.0" layoutY="169.0" prefHeight="18.0" prefWidth="90.0" text="Senha " />
+      <TextArea layoutX="30.0" layoutY="208.0" prefHeight="42.0" prefWidth="390.0" />
+      <Label layoutX="30.0" layoutY="260.0" prefHeight="18.0" prefWidth="90.0" text="Telefone " />
+      <TextArea layoutX="30.0" layoutY="297.0" prefHeight="42.0" prefWidth="390.0" />
+      <Button fx:id="paginaCadastroButton1" layoutX="30.0" layoutY="492.0" onAction="#switchTopaginaLogin" text="Criar conta " />
+      <Label layoutX="30.0" layoutY="68.0" prefHeight="18.0" prefWidth="183.0" text="Já possui conta? Faça login!" />
+        <Button fx:id="paginaCadastroButton" onAction="#switchTopaginaLogin" text="Fazer login" />
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+</VBox>
