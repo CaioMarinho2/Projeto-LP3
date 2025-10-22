@@ -14,16 +14,29 @@ import java.io.IOException;
 public class App extends Application {
 
     private static Scene scene;
+    private static Stage stage; 
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage primaryStage) throws IOException {
+        stage = primaryStage; 
         scene = new Scene(loadFXML("paginaLogin"), 640, 480);
+        stage.setMinWidth(800);
+        stage.setMinHeight(600);
         stage.setScene(scene);
         stage.show();
     }
 
     static void setRoot(String fxml) throws IOException {
+        
+        double currentWidth = stage.getWidth();
+        double currentHeight = stage.getHeight();
+        
+       
         scene.setRoot(loadFXML(fxml));
+        
+       
+        stage.setWidth(currentWidth);
+        stage.setHeight(currentHeight);
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
@@ -34,5 +47,4 @@ public class App extends Application {
     public static void main(String[] args) {
         launch();
     }
-
 }
