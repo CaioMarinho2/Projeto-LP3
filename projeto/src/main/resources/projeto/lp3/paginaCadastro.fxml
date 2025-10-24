@@ -8,67 +8,81 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="476.0" prefWidth="440.0" spacing="20.0" style="-fx-background-radius: 30px; -fx-background-color: #2c2c2c;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.lp3.paginaCadastroController">
-    <children>
-        <Label alignment="CENTER" prefHeight="16.0" prefWidth="397.0" text="Crie sua conta" textFill="WHITE">
-            <font>
-                <Font name="Segoe UI Light" size="23.0" />
-            </font>
-        </Label>
+<VBox prefHeight="476.0" prefWidth="440.0" spacing="20.0"
+   style="-fx-background-radius: 30px; -fx-background-color: #2c2c2c;"
+   xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+   fx:controller="projeto.lp3.paginaCadastroController">
+   <children>
+      <Label alignment="CENTER" prefHeight="16.0" prefWidth="397.0" text="Crie sua conta"
+         textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Light" size="23.0" />
+         </font>
+      </Label>
 
-        <Label layoutX="30.0" layoutY="30.0" prefHeight="15.0" prefWidth="124.0" text="Nome completo" textFill="WHITE">
-            <font>
-                <Font name="Tahoma" size="13.0" />
-            </font>
-        </Label>
-        <TextField fx:id="campoNome" cache="true" prefHeight="42.0" prefWidth="390.0" opacity="0.9" />
+      <Label layoutX="30.0" layoutY="30.0" prefHeight="15.0" prefWidth="124.0" text="Nome completo"
+         textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoNome" cache="true" prefHeight="42.0" prefWidth="390.0" opacity="0.9" />
 
-        <Label prefHeight="18.0" prefWidth="122.0" text="Nome de usuário" textFill="WHITE">
-            <font>
-                <Font name="Tahoma" size="13.0" />
-            </font>
-        </Label>
-        <TextField fx:id="campoUsuario" prefHeight="42.0" prefWidth="390.0" opacity="0.9" />
+      <Label prefHeight="18.0" prefWidth="122.0" text="Nome de usuário" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoUsuario" prefHeight="42.0" prefWidth="390.0" opacity="0.9" />
 
-        <Label layoutX="30.0" layoutY="68.0" prefHeight="18.0" prefWidth="90.0" text="Email" textFill="WHITE">
-            <font>
-                <Font name="Tahoma" size="13.0" />
-            </font>
-        </Label>
-        <TextField fx:id="campoEmail" layoutX="30.0" layoutY="107.0" prefHeight="42.0" prefWidth="390.0" opacity="0.9" />
+      <Label layoutX="30.0" layoutY="68.0" prefHeight="18.0" prefWidth="90.0" text="Email"
+         textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoEmail" layoutX="30.0" layoutY="107.0" prefHeight="42.0"
+         prefWidth="390.0" opacity="0.9" />
 
-        <Label layoutX="30.0" layoutY="169.0" prefHeight="18.0" prefWidth="90.0" text="Senha" textFill="WHITE">
-            <font>
-                <Font name="Tahoma" size="13.0" />
-            </font>
-        </Label>
-        <PasswordField fx:id="campoSenha" layoutX="30.0" layoutY="208.0" prefHeight="42.0" prefWidth="390.0" opacity="0.9" />
+      <Label layoutX="30.0" layoutY="169.0" prefHeight="18.0" prefWidth="90.0" text="Senha"
+         textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="campoSenha" layoutX="30.0" layoutY="208.0" prefHeight="42.0"
+         prefWidth="390.0" opacity="0.9" />
 
-        <Label layoutX="30.0" layoutY="260.0" prefHeight="18.0" prefWidth="130.0" text="Data de nascimento" textFill="WHITE">
-            <font>
-                <Font name="Tahoma" size="13.0" />
-            </font>
-        </Label>
-        <TextField fx:id="campoNascimento" layoutX="30.0" layoutY="297.0" prefHeight="1.0" prefWidth="400.0" promptText="DD/MM/AAAA" opacity="0.9" />
+      <Label layoutX="30.0" layoutY="260.0" prefHeight="18.0" prefWidth="130.0"
+         text="Data de nascimento" textFill="WHITE">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="campoNascimento" layoutX="30.0" layoutY="297.0" prefHeight="1.0"
+         prefWidth="400.0" promptText="DD/MM/AAAA" opacity="0.9" />
 
-        <Button fx:id="paginaCadastroButton1" layoutX="30.0" layoutY="492.0" onAction="#criarConta" style="-fx-background-color: #1882FF;" text="Criar conta" textFill="WHITE">
-            <font>
-                <Font name="Segoe UI" size="13.0" />
-            </font>
-        </Button>
+      <Button fx:id="paginaCadastroButton1" layoutX="30.0" layoutY="492.0" onAction="#criarConta"
+         style="-fx-background-color: #1882FF;" text="Criar conta" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Button>
 
-        <Label layoutX="30.0" layoutY="68.0" prefHeight="18.0" prefWidth="183.0" text="Já possui conta? Faça login." textFill="#f5fa00">
-            <font>
-                <Font name="Tahoma" size="13.0" />
-            </font>
-        </Label>
-        <Button fx:id="paginaCadastroButton" onAction="#switchTopaginaLogin" style="-fx-background-color: #1882FF;" text="Fazer login" textFill="WHITE">
-            <font>
-                <Font name="Segoe UI" size="13.0" />
-            </font>
-        </Button>
-    </children>
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-    </padding>
+      <Label layoutX="30.0" layoutY="68.0" prefHeight="18.0" prefWidth="183.0"
+         text="Já possui conta? Faça login." textFill="#f5fa00">
+         <font>
+            <Font name="Tahoma" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="paginaCadastroButton" onAction="#switchTopaginaLogin"
+         style="-fx-background-color: #1882FF;" text="Fazer login" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI" size="13.0" />
+         </font>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
 </VBox>

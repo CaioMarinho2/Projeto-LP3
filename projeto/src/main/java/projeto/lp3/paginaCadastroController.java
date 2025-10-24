@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.regex.Pattern;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.PasswordField;
@@ -42,6 +43,11 @@ public class paginaCadastroController {
             mostrarAlerta("Erro", "Por favor, preencha todos os campos.", AlertType.ERROR);
             return;
         }
+
+           if (!emailValido(email)) {
+            mostrarAlerta("Erro", "E-mail inválido! Use um formato válido (ex: nome@gmail.com).", AlertType.ERROR);
+            return;
+        }
         LocalDate data;
         try {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
@@ -66,7 +72,7 @@ public class paginaCadastroController {
             System.out.println("Usuário cadastrado com sucesso!");
 
             mostrarAlerta("Sucesso", "Usuário cadastrado com sucesso!", AlertType.INFORMATION);
-            limparCampos();
+            
             try {
                 switchTopaginaLogin();
             } catch (IOException e) {
@@ -78,12 +84,9 @@ public class paginaCadastroController {
         }
     }
 
-    private void limparCampos() {
-        campoNome.clear();
-        campoUsuario.clear();
-        campoEmail.clear();
-        campoSenha.clear();
-        campoNascimento.clear();
+    private boolean emailValido(String email) {
+        String padraoEmail = "^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$";
+        return Pattern.matches(padraoEmail, email);
     }
 
     @FXML

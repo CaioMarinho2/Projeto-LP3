@@ -8,37 +8,39 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox alignment="TOP_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="761.0" style="-fx-background-color: #2c2c2c;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projeto.lp3.paginaPrincipalController">
-   <children>
-      <MenuBar>
-        <menus>
-          <Menu mnemonicParsing="false" text="Arquivo">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Novo" />
-                  <MenuItem mnemonicParsing="false" text="Abrir..." />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Salvar" />
-                  <MenuItem mnemonicParsing="false" text="Salvar como..." />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Importar de..." />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Editar">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Deletar mensagem" />
-                  <MenuItem mnemonicParsing="false" text="Editar mensagem" />
-                  <MenuItem mnemonicParsing="false" text="Recortar mensagem" />
-                  <MenuItem mnemonicParsing="false" text="Colar mensagem" />
-            </items>
-          </Menu>
-          <Menu mnemonicParsing="false" text="Ajuda">
-            <items>
-              <MenuItem mnemonicParsing="false" text="Sobre nós" />
-                  <MenuItem mnemonicParsing="false" text="Buscar por atualizações" />
-            </items>
-          </Menu>
-            <Menu mnemonicParsing="false" text="Sair" onAction="#switchTopaginaLogin" />
-        </menus>
-      </MenuBar>
-      <BorderPane prefHeight="0.0" prefWidth="762.0" />
-   </children>
+  <children>
+    <MenuBar>
+      <menus>
+        <Menu mnemonicParsing="false" text="Arquivo">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Novo" />
+            <MenuItem mnemonicParsing="false" text="Abrir..." />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Salvar" />
+            <MenuItem mnemonicParsing="false" text="Salvar como..." />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" text="Importar de..." />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Editar">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Editar mensagem" />
+            <MenuItem mnemonicParsing="false" text="Recortar mensagem" />
+            <MenuItem mnemonicParsing="false" text="Colar mensagem" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Ajuda">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Sobre nós" />
+            <MenuItem mnemonicParsing="false" text="Buscar por atualizações" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Sair">
+               <items>
+            <MenuItem mnemonicParsing="false" onAction="#switchTopaginaLogin" text="Deslogar" />
+               </items></Menu>
+      </menus>
+    </MenuBar>
+    <BorderPane prefHeight="0.0" prefWidth="762.0" />
+  </children>
 </VBox>
