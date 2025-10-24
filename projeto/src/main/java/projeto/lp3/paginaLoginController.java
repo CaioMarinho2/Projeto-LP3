@@ -9,7 +9,7 @@ public class paginaLoginController {
     private void switchTopaginaCadastro() throws IOException {
         App.setRoot("paginaCadastro");
     }
-    
+
     @FXML
     private void switchTopaginaPrincipal() throws IOException {
         App.setRoot("paginaPrincipal");

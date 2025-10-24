@@ -10,5 +10,3 @@ public class paginaPrincipalController {
         App.setRoot("paginaLogin");
     }
 }
-    
-

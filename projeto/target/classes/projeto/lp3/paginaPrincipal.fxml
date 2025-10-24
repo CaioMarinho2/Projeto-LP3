@@ -36,7 +36,7 @@
                   <MenuItem mnemonicParsing="false" text="Buscar por atualizações" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="Sair" />
+            <Menu mnemonicParsing="false" text="Sair" onAction="#switchTopaginaLogin" />
         </menus>
       </MenuBar>
       <BorderPane prefHeight="0.0" prefWidth="762.0" />
