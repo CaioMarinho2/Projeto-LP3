@@ -27,35 +27,36 @@ public class paginaLoginController {
 
     @FXML
     private void switchTopaginaPrincipal() throws IOException {
-        String usuario = campoUsuario.getText();
-        String senha = campoSenha.getText();
+        String usuario = campoUsuario.getText().trim();;
+        String senha = campoSenha.getText().trim();
 
-        
         if (usuario.isEmpty() || senha.isEmpty()) {
             mostrarAlerta("Erro", "Preencha todos os campos.", Alert.AlertType.ERROR);
             return;
         }
 
         try (Connection conn = DatabaseConnection.getConnection()) {
-            String sql = "SELECT senha FROM usuarios WHERE usuario = ?";
-           
+            String sql = "SELECT id, senha FROM usuarios WHERE usuario = ?";
+
             PreparedStatement stmt = conn.prepareStatement(sql);
             stmt.setString(1, usuario);
 
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
+                int idUsuario = rs.getInt("id");
                 String senhaBanco = rs.getString("senha");
 
                 if (senha.equals(senhaBanco)) {
+                    App.setUsuarioLogadoId(idUsuario);
                     mostrarAlerta("Sucesso", "Bem vindo de volta!", AlertType.INFORMATION);
                     App.setRoot("paginaPrincipal");
                 } else {
-                   
+
                     mostrarAlerta("Erro", "Senha ou nome de usuário incorretos.", Alert.AlertType.ERROR);
                 }
             } else {
-                
+
                 mostrarAlerta("Erro", "Senha ou nome de usuário incorretos.", Alert.AlertType.ERROR);
             }
 

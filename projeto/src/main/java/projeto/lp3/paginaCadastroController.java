@@ -44,7 +44,7 @@ public class paginaCadastroController {
             return;
         }
 
-           if (!emailValido(email)) {
+        if (!emailValido(email)) {
             mostrarAlerta("Erro", "E-mail inválido! Use um formato válido (ex: nome@gmail.com).", AlertType.ERROR);
             return;
         }
@@ -72,7 +72,7 @@ public class paginaCadastroController {
             System.out.println("Usuário cadastrado com sucesso!");
 
             mostrarAlerta("Sucesso", "Usuário cadastrado com sucesso!", AlertType.INFORMATION);
-            
+
             try {
                 switchTopaginaLogin();
             } catch (IOException e) {
