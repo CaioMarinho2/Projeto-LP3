@@ -27,7 +27,8 @@ public class paginaLoginController {
 
     @FXML
     private void switchTopaginaPrincipal() throws IOException {
-        String usuario = campoUsuario.getText().trim();;
+        String usuario = campoUsuario.getText().trim();
+        ;
         String senha = campoSenha.getText().trim();
 
         if (usuario.isEmpty() || senha.isEmpty()) {
