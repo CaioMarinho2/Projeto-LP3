@@ -36,7 +36,7 @@ public class App extends Application {
         stage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
+    public static void setRoot(String fxml) throws IOException {
 
         double currentWidth = stage.getWidth();
         double currentHeight = stage.getHeight();

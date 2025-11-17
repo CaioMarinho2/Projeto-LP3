@@ -1,4 +1,4 @@
-package projeto.lp3;
+package projeto.lp3.util;
 
 import java.io.IOException;
 import java.io.InputStream;

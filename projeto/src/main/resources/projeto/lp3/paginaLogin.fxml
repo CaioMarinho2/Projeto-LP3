@@ -11,7 +11,7 @@
 
 <VBox spacing="20.0" style="-fx-background-color: #2c2c2c; -fx-background-radius: 30px;"
    xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-   fx:controller="projeto.lp3.paginaLoginController">
+   fx:controller="projeto.lp3.controller.PaginaLoginController">
    <children>
       <Label alignment="CENTER" prefHeight="18.0" prefWidth="287.0" text="Fazer login "
          textAlignment="CENTER" textFill="WHITE">
@@ -35,7 +35,7 @@
       <PasswordField fx:id="campoSenha" layoutX="30.0" layoutY="199.0" opacity="0.9"
          prefHeight="38.0" prefWidth="283.0" />
       <Button fx:id="paginaLoginButton1" layoutX="30.0" layoutY="281.0"
-         onAction="#switchTopaginaPrincipal" style="-fx-background-color: #1882FF;" text="Login"
+         onAction="#entrar" style="-fx-background-color: #1882FF;" text="Login"
          textFill="WHITE">
          <font>
             <Font name="Segoe UI" size="13.0" />
