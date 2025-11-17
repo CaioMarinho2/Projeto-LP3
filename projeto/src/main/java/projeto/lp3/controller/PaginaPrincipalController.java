@@ -85,6 +85,24 @@ public class PaginaPrincipalController {
     }
 
     @FXML
+    private void switchTopaginaSobreNos() {
+        try {
+            App.setRoot("PaginaSobreNos");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void switchTopaginaPerfil() {
+        try {
+            App.setRoot("PaginaPerfil");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
     private void postar() {
         String c = campoPost.getText().trim();
 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+
+<VBox spacing="20" alignment="TOP_CENTER"
+      xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="projeto.lp3.controller.PaginaPerfilController"
+      style="-fx-padding: 20;">
+
+    <Label text="Meu Perfil" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+    <VBox alignment="CENTER" spacing="15">
+        <StackPane>
+            <ImageView fx:id="fotoPerfil" fitWidth="120" fitHeight="120">
+                <clip>
+                    <Circle radius="60" />
+                </clip>
+            </ImageView>
+        </StackPane>
+
+        <Button text="Alterar Foto" style="-fx-background-color: #d7fa00; -fx-text-fill: #0d0d0d; -fx-font-weight: bold; -fx-padding: 5 15 5 15;"
+                fx:id="btnAlterarFoto" />
+    </VBox>
+
+    <VBox spacing="12" alignment="CENTER_LEFT" style="-fx-padding: 0 40 0 40;">
+        <Label text="Nome" />
+        <TextField fx:id="campoNome"/>
+
+        <Label text="Usuário (@)" />
+        <TextField fx:id="campoUsuario"/>
+
+        <Label text="Email" />
+        <TextField fx:id="campoEmail"/>
+
+        <Label text="Senha" />
+        <TextField fx:id="campoSenha"/>
+
+      
+    </VBox>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Salvar Alterações" style="-fx-background-color: #d7fa00; -fx-text-fill: #0d0d0d; -fx-font-weight: bold; -fx-padding: 5 15 5 15;"
+                fx:id="btnSalvar" />
+        <Button text="Voltar" style="-fx-background-color: #d7fa00; -fx-text-fill: #0d0d0d; -fx-font-weight: bold; -fx-padding: 5 15 5 15;"
+                fx:id="btnVoltar" onAction="#voltarPagPrincipal"/>
+    </HBox>
+
+</VBox>
