@@ -1,88 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="476.0" prefWidth="440.0" spacing="20.0"
-   style="-fx-background-radius: 30px; -fx-background-color: #2c2c2c;"
-   xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
-   fx:controller="projeto.lp3.controller.PaginaCadastroController">
-   <children>
-      <Label alignment="CENTER" prefHeight="16.0" prefWidth="397.0" text="Crie sua conta"
-         textFill="WHITE">
-         <font>
-            <Font name="Segoe UI Light" size="23.0" />
-         </font>
-      </Label>
+<VBox spacing="20.0"
+      style="-fx-background-color: #0d0d0d; -fx-padding: 20;"
+      xmlns="http://javafx.com/javafx/25"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="projeto.lp3.controller.PaginaCadastroController">
 
-      <Label layoutX="30.0" layoutY="30.0" prefHeight="15.0" prefWidth="124.0" text="Nome completo"
-         textFill="WHITE">
-         <font>
-            <Font name="Tahoma" size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="campoNome" cache="true" prefHeight="42.0" prefWidth="390.0" opacity="0.9" />
+    <Label text="Crie sua conta" textFill="#d7fa00"
+           style="-fx-font-size: 24; -fx-font-weight: bold;"/>
 
-      <Label prefHeight="18.0" prefWidth="122.0" text="Nome de usuário" textFill="WHITE">
-         <font>
-            <Font name="Tahoma" size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="campoUsuario" prefHeight="42.0" prefWidth="390.0" opacity="0.9" />
+    <Label text="Nome completo" textFill="#ffffff"/>
+    <TextField fx:id="campoNome" style="-fx-background-color: #1a1a1a; -fx-text-fill: white;"/>
 
-      <Label layoutX="30.0" layoutY="68.0" prefHeight="18.0" prefWidth="90.0" text="Email"
-         textFill="WHITE">
-         <font>
-            <Font name="Tahoma" size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="campoEmail" layoutX="30.0" layoutY="107.0" prefHeight="42.0"
-         prefWidth="390.0" opacity="0.9" />
+    <Label text="Nome de usuário" textFill="#ffffff"/>
+    <TextField fx:id="campoUsuario" style="-fx-background-color: #1a1a1a; -fx-text-fill: white;"/>
 
-      <Label layoutX="30.0" layoutY="169.0" prefHeight="18.0" prefWidth="90.0" text="Senha"
-         textFill="WHITE">
-         <font>
-            <Font name="Tahoma" size="13.0" />
-         </font>
-      </Label>
-      <PasswordField fx:id="campoSenha" layoutX="30.0" layoutY="208.0" prefHeight="42.0"
-         prefWidth="390.0" opacity="0.9" />
+    <Label text="Email" textFill="#ffffff"/>
+    <TextField fx:id="campoEmail" style="-fx-background-color: #1a1a1a; -fx-text-fill: white;"/>
 
-      <Label layoutX="30.0" layoutY="260.0" prefHeight="18.0" prefWidth="130.0"
-         text="Data de nascimento" textFill="WHITE">
-         <font>
-            <Font name="Tahoma" size="13.0" />
-         </font>
-      </Label>
-      <TextField fx:id="campoNascimento" layoutX="30.0" layoutY="297.0" prefHeight="1.0"
-         prefWidth="400.0" promptText="DD/MM/AAAA" opacity="0.9" />
+    <Label text="Senha" textFill="#ffffff"/>
+    <PasswordField fx:id="campoSenha" style="-fx-background-color: #1a1a1a; -fx-text-fill: white;"/>
 
-      <Button fx:id="paginaCadastroButton1" layoutX="30.0" layoutY="492.0" onAction="#criarConta"
-         style="-fx-background-color: #1882FF;" text="Criar conta" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI" size="13.0" />
-         </font>
-      </Button>
+    <Label text="Data de nascimento" textFill="#ffffff"/>
+    <TextField fx:id="campoNascimento"
+               promptText="DD/MM/AAAA"
+               style="-fx-background-color: #1a1a1a; -fx-text-fill: white;"/>
 
-      <Label layoutX="30.0" layoutY="68.0" prefHeight="18.0" prefWidth="183.0"
-         text="Já possui conta? Faça login." textFill="#f5fa00">
-         <font>
-            <Font name="Tahoma" size="13.0" />
-         </font>
-      </Label>
-      <Button fx:id="paginaCadastroButton" onAction="#switchTopaginaLogin"
-         style="-fx-background-color: #1882FF;" text="Fazer login" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI" size="13.0" />
-         </font>
-      </Button>
-   </children>
-   <padding>
-      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-   </padding>
+    <Button text="Criar conta"
+            onAction="#criarConta"
+            style="-fx-background-color: #d7fa00; -fx-text-fill: #000000;"/>
+
+    <Label text="Já possui conta? Faça login." textFill="#d7fa00"/>
+
+    <Button text="Fazer login"
+            onAction="#switchTopaginaLogin"
+            style="-fx-background-color: #d7fa00; -fx-text-fill: #000000;"/>
+
 </VBox>

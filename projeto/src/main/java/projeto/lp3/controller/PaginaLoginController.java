@@ -13,10 +13,8 @@ import projeto.lp3.service.UsuarioService;
 
 public class PaginaLoginController {
 
-    @FXML
-    private TextField campoUsuario;
-    @FXML
-    private PasswordField campoSenha;
+    @FXML private TextField campoUsuario;
+    @FXML private PasswordField campoSenha;
 
     private UsuarioService usuarioService = new UsuarioService();
 
