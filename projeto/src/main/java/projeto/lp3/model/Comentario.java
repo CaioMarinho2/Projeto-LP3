@@ -2,24 +2,23 @@ package projeto.lp3.model;
 
 import java.time.LocalDateTime;
 
-public class Post {
+public class Comentario {
 
     private int id;
+    private int postId;
     private int usuarioId;
     private String usuarioNome;
     private String conteudo;
     private LocalDateTime dataCriacao;
-    private boolean compartilhado;
-    private String compartilhadoPor;
-    private int curtidas;
 
-    public Post() {
-    }
-
-    public Post(int usuarioId, String conteudo) {
+    public Comentario() {}
+    
+    public Comentario(int postId, int usuarioId, String conteudo) {
+        this.postId = postId;
         this.usuarioId = usuarioId;
         this.conteudo = conteudo;
     }
+ 
 
     public int getId() {
         return id;
@@ -27,6 +26,14 @@ public class Post {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getPostId() {
+        return postId;
+    }
+
+    public void setPostId(int postId) {
+        this.postId = postId;
     }
 
     public int getUsuarioId() {
@@ -59,29 +66,5 @@ public class Post {
 
     public void setDataCriacao(LocalDateTime dataCriacao) {
         this.dataCriacao = dataCriacao;
-    }
-
-    public boolean isCompartilhado() {
-        return compartilhado;
-    }
-
-    public void setCompartilhado(boolean compartilhado) {
-        this.compartilhado = compartilhado;
-    }
-
-    public String getCompartilhadoPor() {
-        return compartilhadoPor;
-    }
-
-    public void setCompartilhadoPor(String compartilhadoPor) {
-        this.compartilhadoPor = compartilhadoPor;
-    }
-
-    public int getCurtidas() {
-        return curtidas;
-    }
-
-    public void setCurtidas(int curtidas) {
-        this.curtidas = curtidas;
     }
 }

@@ -34,4 +34,8 @@ public class UsuarioService {
         }
         return null;
     }
+
+    public Usuario buscarPorId(int id) {
+        return usuarioDAO.buscarPorId(id);
+    }
 }

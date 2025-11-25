@@ -17,6 +17,7 @@ public class App extends Application {
     private static Stage stage;
 
     private static int usuarioLogadoId;
+    private static int postSelecionadoId;
 
     public static void setUsuarioLogadoId(int id) {
         usuarioLogadoId = id;
@@ -26,10 +27,18 @@ public class App extends Application {
         return usuarioLogadoId;
     }
 
+    public static void setPostSelecionadoId(int id) {
+        postSelecionadoId = id;
+    }
+
+    public static int getPostSelecionadoId() {
+        return postSelecionadoId;
+    }
+
     @Override
     public void start(Stage primaryStage) throws IOException {
         stage = primaryStage;
-        scene = new Scene(loadFXML("paginaLogin"), 640, 480);
+        scene = new Scene(loadFXML("PaginaLogin"), 640, 480);
         stage.setMinWidth(800);
         stage.setMinHeight(600);
         stage.setScene(scene);
