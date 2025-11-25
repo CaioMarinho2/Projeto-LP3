@@ -10,6 +10,7 @@ public class Usuario {
     private String email;
     private String senha;
     private LocalDate nascimento;
+    private String foto;
 
     public Usuario() {
     }
@@ -68,5 +69,13 @@ public class Usuario {
 
     public void setNascimento(LocalDate nascimento) {
         this.nascimento = nascimento;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
     }
 }

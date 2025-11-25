@@ -88,9 +88,8 @@ public class PaginaPrincipalController {
 
                     if (p.isCompartilhado() && p.getCompartilhadoPor() != null) {
                         nomeData.setText(
-                            "Compartilhado por @" + p.getCompartilhadoPor() + "\n@" +
-                            p.getUsuarioNome() + "  •  " + dataFormatada
-                        );
+                                "Compartilhado por @" + p.getCompartilhadoPor() + "\n@" +
+                                        p.getUsuarioNome() + "  •  " + dataFormatada);
                         btnCompartilhar.setDisable(true);
                     } else {
                         nomeData.setText("@" + p.getUsuarioNome() + "  •  " + dataFormatada);
@@ -100,8 +99,11 @@ public class PaginaPrincipalController {
                     conteudo.setText(p.getConteudo());
 
                     boolean ehDono = p.getUsuarioId() == usuarioId;
-                    btnEditar.setVisible(ehDono);
-                    btnEditar.setManaged(ehDono);
+                    boolean podeEditar = ehDono && !p.isCompartilhado();
+
+                    btnEditar.setVisible(podeEditar);
+                    btnEditar.setManaged(podeEditar);
+
                     btnExcluir.setVisible(ehDono);
                     btnExcluir.setManaged(ehDono);
 

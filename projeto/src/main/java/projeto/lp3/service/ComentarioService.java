@@ -1,4 +1,4 @@
-package projeto.lp3.service; 
+package projeto.lp3.service;
 
 import projeto.lp3.dao.ComentarioDAO;
 import projeto.lp3.model.Comentario;

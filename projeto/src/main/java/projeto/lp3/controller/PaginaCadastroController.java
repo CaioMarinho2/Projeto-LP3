@@ -15,11 +15,16 @@ import projeto.lp3.service.UsuarioService;
 
 public class PaginaCadastroController {
 
-    @FXML private TextField campoNome;
-    @FXML private TextField campoUsuario;
-    @FXML private TextField campoEmail;
-    @FXML private PasswordField campoSenha;
-    @FXML private TextField campoNascimento;
+    @FXML
+    private TextField campoNome;
+    @FXML
+    private TextField campoUsuario;
+    @FXML
+    private TextField campoEmail;
+    @FXML
+    private PasswordField campoSenha;
+    @FXML
+    private TextField campoNascimento;
 
     private UsuarioService usuarioService = new UsuarioService();
 
@@ -73,7 +78,10 @@ public class PaginaCadastroController {
 
         if (ok) {
             mostrar("Sucesso", "Usuário cadastrado!", AlertType.INFORMATION);
-            try { App.setRoot("PaginaLogin"); } catch (IOException e) {}
+            try {
+                App.setRoot("PaginaLogin");
+            } catch (IOException e) {
+            }
         } else {
             mostrar("Erro", "Falha ao cadastrar.", AlertType.ERROR);
         }

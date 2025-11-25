@@ -11,14 +11,14 @@ public class Comentario {
     private String conteudo;
     private LocalDateTime dataCriacao;
 
-    public Comentario() {}
-    
+    public Comentario() {
+    }
+
     public Comentario(int postId, int usuarioId, String conteudo) {
         this.postId = postId;
         this.usuarioId = usuarioId;
         this.conteudo = conteudo;
     }
- 
 
     public int getId() {
         return id;

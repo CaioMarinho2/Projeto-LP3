@@ -38,4 +38,16 @@ public class UsuarioService {
     public Usuario buscarPorId(int id) {
         return usuarioDAO.buscarPorId(id);
     }
+
+    public int contarSeguidores(int id) {
+        return usuarioDAO.contarSeguidores(id);
+    }
+
+    public int contarSeguindo(int id) {
+        return usuarioDAO.contarSeguindo(id);
+    }
+
+    public void atualizarPerfil(int id, String nome, String usuario, String email, LocalDate nasc, String foto) {
+        usuarioDAO.atualizarPerfil(id, nome, usuario, email, nasc, foto);
+    }
 }

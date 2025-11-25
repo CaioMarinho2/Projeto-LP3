@@ -13,7 +13,7 @@ public class ComentarioDAO {
         String sql = "INSERT INTO comentarios (post_id, usuario_id, conteudo) VALUES (?, ?, ?)";
 
         try (Connection conn = DatabaseConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setInt(1, c.getPostId());
             stmt.setInt(2, c.getUsuarioId());
@@ -29,13 +29,13 @@ public class ComentarioDAO {
     public List<Comentario> listarPorPost(int postId) {
         List<Comentario> lista = new ArrayList<>();
         String sql = "SELECT c.id, c.post_id, c.usuario_id, u.usuario, c.conteudo, c.data_criacao " +
-                     "FROM comentarios c " +
-                     "JOIN usuarios u ON c.usuario_id = u.id " +
-                     "WHERE c.post_id = ? " +
-                     "ORDER BY c.data_criacao ASC";
+                "FROM comentarios c " +
+                "JOIN usuarios u ON c.usuario_id = u.id " +
+                "WHERE c.post_id = ? " +
+                "ORDER BY c.data_criacao ASC";
 
         try (Connection conn = DatabaseConnection.getConnection();
-             PreparedStatement stmt = conn.prepareStatement(sql)) {
+                PreparedStatement stmt = conn.prepareStatement(sql)) {
 
             stmt.setInt(1, postId);
             ResultSet rs = stmt.executeQuery();

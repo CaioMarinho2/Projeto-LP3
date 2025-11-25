@@ -6,29 +6,30 @@
 <?import javafx.scene.text.Font?>
 
 <VBox spacing="20.0"
-      style="-fx-background-color: #0d0d0d; -fx-padding: 20;"
-      xmlns="http://javafx.com/javafx/25"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="projeto.lp3.controller.PaginaLoginController">
+        style="-fx-background-color: #0d0d0d; -fx-padding: 20;"
+        xmlns="http://javafx.com/javafx/25"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="projeto.lp3.controller.PaginaLoginController">
 
-    <Label text="Fazer login"
-           textFill="#d7fa00"
-           style="-fx-font-size: 24; -fx-font-weight: bold;" />
+        <Label text="Fazer login"
+                textFill="#d7fa00"
+                style="-fx-font-size: 24; -fx-font-weight: bold;" />
 
-    <Label text="Nome de usuário" textFill="#ffffff"/>
-    <TextField fx:id="campoUsuario" style="-fx-background-color: #1a1a1a; -fx-text-fill: white;"/>
+        <Label text="Nome de usuário" textFill="#ffffff" />
+        <TextField fx:id="campoUsuario" style="-fx-background-color: #1a1a1a; -fx-text-fill: white;" />
 
-    <Label text="Senha" textFill="#ffffff"/>
-    <PasswordField fx:id="campoSenha" style="-fx-background-color: #1a1a1a; -fx-text-fill: white;"/>
+        <Label text="Senha" textFill="#ffffff" />
+        <PasswordField fx:id="campoSenha"
+                style="-fx-background-color: #1a1a1a; -fx-text-fill: white;" />
 
-    <Button text="Login"
-            onAction="#entrar"
-            style="-fx-background-color: #d7fa00; -fx-text-fill: #000000;"/>
+        <Button text="Login"
+                onAction="#entrar"
+                style="-fx-background-color: #d7fa00; -fx-text-fill: #000000;" />
 
-    <Label text="Não possui conta? Crie agora!" textFill="#d7fa00"/>
+        <Label text="Não possui conta? Crie agora!" textFill="#d7fa00" />
 
-    <Button text="Criar conta"
-            onAction="#switchTopaginaCadastro"
-            style="-fx-background-color: #d7fa00; -fx-text-fill: black;"/>
+        <Button text="Criar conta"
+                onAction="#switchTopaginaCadastro"
+                style="-fx-background-color: #d7fa00; -fx-text-fill: black;" />
 
 </VBox>
