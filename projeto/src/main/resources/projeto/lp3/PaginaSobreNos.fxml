@@ -14,7 +14,9 @@
               style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #d7fa00;" />
 
        <Label
-              text="Este projeto foi desenvolvido como parte dos requisitos da disciplina Linguagem de Programação 3 da Universidade Federal Rural do Rio de Janeiro (UFRRJ). O trabalho reflete o compromisso acadêmico dos estudantes Caio Marinho dos Reis e Maria Fernanda Galdino, do curso de Sistemas de Informação, que buscaram aplicar conceitos de arquitetura de software, boas práticas de programação e desenvolvimento de interfaces gráficas para construir uma solução funcional, organizada e alinhada às demandas da disciplina aplicada à uma lógica de uma rede social simples, intuitiva e dinâmica."
+              text="Este projeto foi desenvolvido como parte dos requisitos da disciplina Linguagem de Programação 3 da Universidade Federal Rural do Rio de Janeiro (UFRRJ). O trabalho reflete o compromisso acadêmico dos estudantes Caio Marinho dos Reis e Maria Fernanda Galdino, do curso de Sistemas de Informação, que buscaram aplicar conceitos de arquitetura de software, boas práticas de programação e desenvolvimento de interfaces gráficas para construir uma solução funcional, organizada e alinhada às demandas da disciplina, aplicada à lógica de uma rede social simples, intuitiva e dinâmica.
+
+Caso deseje saber mais ou contribuir com o projeto, entre em contato conosco pelo nosso GitHub ou pelo e-mail!"
               wrapText="true"
               textAlignment="CENTER"
               style="-fx-font-size: 16px; -fx-text-fill: #ffffff; -fx-alignment: center;" />
